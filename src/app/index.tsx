@@ -13,6 +13,7 @@ import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import { GlobalStyle } from '../styles/global-styles';
 
 import { HomePage } from './containers/HomePage/Loadable';
+import { LoginPage } from './containers/LoginPage/Loadable';
 import { NotFoundPage } from './containers/NotFoundPage/Loadable';
 
 export function App() {
@@ -24,9 +25,9 @@ export function App() {
       >
         <meta name="description" content="A React Boilerplate application" />
       </Helmet>
-
       <Switch>
         <Route exact path={process.env.PUBLIC_URL + '/'} component={HomePage} />
+        <Route exact path="/login" component={LoginPage} />
         <Route component={NotFoundPage} />
       </Switch>
       <GlobalStyle />
